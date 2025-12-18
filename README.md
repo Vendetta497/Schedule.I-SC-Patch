@@ -1,5 +1,7 @@
 # Schedule-I-Simplified-Chinese-Patch
 Schedule I简中汉化补丁
+![20D25A~1](https://github.com/user-attachments/assets/490f78b5-e35c-4c65-baf4-9ebf042bdb97)
+
 
 安装教程视频：https://www.bilibili.com/video/BV1WL22BQE33
 
