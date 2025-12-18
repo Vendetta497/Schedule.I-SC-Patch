@@ -23,3 +23,7 @@ Schedule I简中汉化补丁
 注：这个字体替换工具会备份游戏原文件里的sharedassets0.asset文件（生成.bak文件），如果出问题要还原的话把替换好的sharedassets0.asset文件删掉，再把备份文件的.bak后缀删掉就可以了
 
 font_SC.exe是用繁中字体替换工具源代码制作的简中字体替换工具，经过测试可以正常使用，如有问题请使用繁中字体替换工具，二者功能一样，仅仅运行时候显示的字体不一样
+
+# 参考
+https://forum.gamer.com.tw/C.php?page=1&bsn=82540&snA=6
+https://github.com/XoF-eLtTiL/Tang-Family-Server/releases/tag/SI
