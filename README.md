@@ -1,5 +1,6 @@
 # Schedule-I-Simplified-Chinese-Patch
 Schedule I简中汉化补丁
+
 安装教程视频：https://www.bilibili.com/video/BV1WL22BQE33
 
 油管：https://youtu.be/YoFCeSa6Lyk
