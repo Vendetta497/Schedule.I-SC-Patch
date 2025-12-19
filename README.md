@@ -3,7 +3,7 @@ Schedule I简中汉化补丁
 
 安装教程视频：https://www.bilibili.com/video/BV1WL22BQE33
 
-油管：https://youtu.be/YoFCeSa6Lyk
+油管：[https://youtu.be/YoFCeSa6Lyk](https://www.youtube.com/playlist?list=PLzb7p3e2nBdWsR347u1H2mteFL4VkXw_2)
 
 ![20D25A~1](https://github.com/user-attachments/assets/490f78b5-e35c-4c65-baf4-9ebf042bdb97)
 
