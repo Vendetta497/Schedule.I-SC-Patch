@@ -33,12 +33,12 @@ Schedule 1_data文件夹的sharedassets0.assets文件是Unity游戏资产文件�
 替换资产字体文件也可以用这个[工具](https://github.com/HanFengRuYue/XUnityToolkit)
 
 # 参考
-[繁中补丁原帖](https://forum.gamer.com.tw/C.php?page=1&bsn=82540&snA=6)
+繁中补丁原帖：https://forum.gamer.com.tw/C.php?page=1&bsn=82540&snA=6)
 
-[繁中补丁链接](https://github.com/XoF-eLtTiL/Tang-Family-Server/releases/tag/SI)
+繁中补丁链接：https://github.com/XoF-eLtTiL/Tang-Family-Server/releases/tag/SI
 
-[翻译插件](https://github.com/bbepis/XUnity.AutoTranslator)
+翻译插件：https://github.com/bbepis/XUnity.AutoTranslator
 
-[字体替换提出方案](https://forum.gamer.com.tw/Co.php?bsn=82540&sn=35)
+字体替换提出方案：https://forum.gamer.com.tw/Co.php?bsn=82540&sn=35
 
-[繁中字体替换工具及源代码](https://drive.google.com/drive/folders/1YUBnhHULnlY8l48rvEkuJR_zOGbtH9WT)
+繁中字体替换工具及源代码：https://drive.google.com/drive/folders/1YUBnhHULnlY8l48rvEkuJR_zOGbtH9WT
