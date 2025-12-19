@@ -7,6 +7,8 @@ Schedule I简中汉化补丁
 
 
 # 最新版汉化补丁
+[下载release](https://github.com/Vendetta497/Schedule.I-SC-Patch/releases)的Schedule.I_SC.7z
+
 注：运行Font_SC.exe会自动备份sharedassets0.assets文件 (bak文件)
 先备份原来的schedule1_data文件的sharedassets0.assets文件，再解压缩汉化补丁
 
@@ -15,6 +17,8 @@ Schedule I简中汉化补丁
 如果字体替换失败等问题，删掉font_SC.exe生成的sharedassets0.assets（也有可能发生错误导致没有），将font_SC.exe生成的sharedassets0.assets.bak文件的.bak后缀去掉，再次运行Font_SC.exe
 
 # 通用版汉化补丁
+[下载release](https://github.com/Vendetta497/Schedule.I-SC-Patch/releases)的Schedule.I_SC_UV.7z
+
 由于多人反馈最新版本的补丁安装汉化失败，闪退，粉屏等问题，故上传了个通用版汉化补丁，目前各版本通用
 
 该补丁为打包好的通用版（无schedule 1_data文件夹的sharedassets0.assets文件，增加了字体替换工具和字体文件）
