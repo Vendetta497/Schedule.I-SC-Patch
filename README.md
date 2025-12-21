@@ -9,8 +9,9 @@ Schedule I简中汉化补丁
 ## 最新版汉化补丁
 [下载release](https://github.com/Vendetta497/Schedule.I-SC-Patch/releases)的Schedule.I_SC.7z
 
-注：运行Font_SC.exe会自动备份sharedassets0.assets文件 (bak文件)
 先备份原来的schedule1_data文件的sharedassets0.assets文件，再解压缩汉化补丁
+
+注：运行Font_SC.exe会自动备份sharedassets0.assets文件 (bak文件)
 
 如果汉化失败则使用原sharedassets0.assets文件，再运行字体替换工具Font.exe,确保字体替换成功（出现“字体替换完成 操作成功完成”提示），检查schedule 1_data文件夹的sharedassets0.assets文件是否替换成功（看文件大小和文件日期是否改变）
 
@@ -35,6 +36,13 @@ font_SC.exe是用繁中字体替换工具源代码制作的简中字体替换工
 Schedule 1_data文件夹的sharedassets0.assets文件是Unity游戏资产文件，包含游戏字体文件，但是英文字体和中文字体（包括简中和繁中）是不一样的，xuntiy-translator插件若要翻译英文成中文就需要中文字体文件，否则就会字体缺失出现仍然是英文或者口口口的情况，这也就是为什么每次游戏更新旧汉化补丁都会失效，游戏更新也更新了sharedassets0.assets文件，又变回英文字体了，这个字体替换程序就能把资产文件的英文字体替换成中文字体了，并且简繁中都适用！
 
 替换资产字体文件也可以用这个[工具](https://github.com/HanFengRuYue/XUnityToolkit)
+
+## 常见问题
+ demo版本不能用，需要正式版，盗版不能保证补丁有效，汉化补丁要压缩覆盖到游戏根目录
+ 
+ 打了补丁仍然是英文的，多半是插件问题，进游戏按Alt+0能不能调出插件UI，（数字0，不是字母O）
+ 
+ 出现口口口的的那就是字体替换失败，粉屏就算资产文件错误，还原备份再替换字体试下
 
 ## 参考
 繁中补丁原帖：https://forum.gamer.com.tw/C.php?page=1&bsn=82540&snA=6)
