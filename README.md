@@ -42,7 +42,16 @@ Schedule 1_data文件夹的sharedassets0.assets文件是Unity游戏资产文件�
  
  打了补丁仍然是英文的，多半是插件问题，进游戏按Alt+0能不能调出插件UI，（数字0，不是字母O）
  
- 出现口口口的的那就是字体替换失败，粉屏就算资产文件错误，还原备份再替换字体试下
+ 出现口口口的的那就是字体替换失败，粉屏就算资产文件错误下载字体替换工具，还原备份再替换字体试下 ，视频有教程
+
+以下是Melonloader报错
+1.如果显示 Downloading the .NET Runtime installer...卡住了或者失败，防火墙的问题，去下载[Net6](https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/6.0.36/windowsdesktop-runtime-6.0.36-win-x64.exe)
+
+2.Melonloader其他报错的，Mod无法加载的就直接进入游戏但是没有汉化的，如果打上网盘里的schedule I.7z文件还是没用的，找个玩这个游戏而且打补丁有效的朋友 让他把游戏文件给自己 或者在群里让群友给你把文件给你
+
+3..Mod显示加载成功但是仍然报错的，多半是因为下的是盗版或者demo，换成正式版
+
+
 
 ## 参考
 繁中补丁原帖：https://forum.gamer.com.tw/C.php?page=1&bsn=82540&snA=6)
