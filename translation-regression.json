@@ -1,0 +1,1032 @@
+[
+  {
+    "input": "Restore Default",
+    "expected": "恢复默认设置",
+    "covers": "static, amount, or dialogue regression"
+  },
+  {
+    "input": "Grain Bag",
+    "expected": "谷物培养袋",
+    "covers": "static, amount, or dialogue regression"
+  },
+  {
+    "input": "setpoliceignoreplayers true, setpoliceignoreplayers false",
+    "expected": "setpoliceignoreplayers true, setpoliceignoreplayers false",
+    "covers": "static, amount, or dialogue regression"
+  },
+  {
+    "input": "3 of 8",
+    "expected": "3 / 8",
+    "covers": "static, amount, or dialogue regression"
+  },
+  {
+    "input": "Initial Offer $120",
+    "expected": "初始出价：$120",
+    "covers": "static, amount, or dialogue regression"
+  },
+  {
+    "input": "Forfeit and collect <color=#54E717>$1,250</color>",
+    "expected": "放弃并领取 <color=#54E717>$1,250</color>",
+    "covers": "static, amount, or dialogue regression"
+  },
+  {
+    "input": "$5K",
+    "expected": "$5千",
+    "covers": "static, amount, or dialogue regression"
+  },
+  {
+    "input": "$2M",
+    "expected": "$2百万",
+    "covers": "static, amount, or dialogue regression"
+  },
+  {
+    "input": "Hello, I'm after 2x OG Kush. I can pay <color=#46CB4F>$60</color> for it.",
+    "expected": "我需要 2 份 OG Kush，我出 <color=#46CB4F>$60</color>。",
+    "covers": "static, amount, or dialogue regression"
+  },
+  {
+    "input": "You got 2x OG Kush? I'll pay <color=#46CB4F>$90</color> for it",
+    "expected": "你有 2 份 OG Kush 吗？我出 <color=#46CB4F>$90</color>。",
+    "covers": "static, amount, or dialogue regression"
+  },
+  {
+    "input": "Hey, I need 2x OG Kush. I'll pay <color=#46CB4F>$120</color>. Deal?",
+    "expected": "嘿，我需要 2 份 OG Kush，出价 <color=#46CB4F>$120</color>，成交？",
+    "covers": "static, amount, or dialogue regression"
+  },
+  {
+    "input": "Alright, I'll be a dealer for you but there is a <color=#54E717>$1,000</color> signing fee, and I'll take a 20% cut of each sale. We got a deal?",
+    "expected": "行，我帮你出货。签约费 <color=#54E717>$1,000</color>，每笔我抽 20%。成交？",
+    "covers": "static, amount, or dialogue regression"
+  },
+  {
+    "input": "Forfeit and collect <color=#54E717>$1,250</color>",
+    "expected": "放弃并领取 <color=#54E717>$1,250</color>",
+    "covers": "r .NET $$$1 literal-dollar + capture semantics and rich-text preservation"
+  },
+  {
+    "input": "Initial Offer $12,500",
+    "expected": "初始出价：$12,500",
+    "covers": "r $$ + $1 money replacement"
+  },
+  {
+    "input": "[PawnShop receipt]\n\nSour Diesel: 2 x $1,250 = $2,500\nOg Kush: 1 x $500 = $500\n\nTotal: $3,000 — Mick",
+    "expected": "[当铺收据]\n\n酸柴油：2 × $1,250 = $2,500\nOg Kush：1 × $500 = $500\n\n总计：$3,000 — 米克",
+    "covers": "sr positional captures, $$ literal dollars, actual newlines"
+  },
+  {
+    "input": "4份 Sour Diesel, Basketball court",
+    "expected": "4份 酸柴油，篮球场",
+    "covers": "Chinese-份 quantity and recursive item/location lookup"
+  },
+  {
+    "input": "4x Sour Diesel, Basketball court",
+    "expected": "4份 酸柴油，篮球场",
+    "covers": "anchored composite splitter priority, qty_i/product_i raw preservation, recursive location lookup"
+  },
+  {
+    "input": "3份 Sour Diesel, Behind the construction site",
+    "expected": "3份 酸柴油，建筑工地后方",
+    "covers": "recursive literal lookup with multiword location"
+  },
+  {
+    "input": "3份 Sour Diesel, Behind Hyland Range",
+    "expected": "3份 酸柴油，海兰射击场后面",
+    "covers": "recursive literal lookup with proper-name location"
+  },
+  {
+    "input": "4x Sour Diesel",
+    "expected": "4份 酸柴油",
+    "covers": "existing dynamic quantity template and _i raw quantity"
+  },
+  {
+    "input": "$5K",
+    "expected": "$5千",
+    "covers": "r triple-dollar replacement for literal currency sign"
+  },
+  {
+    "input": "$2M",
+    "expected": "$2百万",
+    "covers": "r triple-dollar replacement for literal currency sign"
+  },
+  {
+    "input": "$250,000K",
+    "expected": "$250,000K",
+    "covers": "boundary guard: compact currency rule must not match malformed oversized amount"
+  },
+  {
+    "input": "Hey, I need 2x OG Kush. I'll pay <color=#46CB4F>$120</color>. Deal?",
+    "expected": "嘿，我需要 2 份 OG Kush，出价 <color=#46CB4F>$120</color>，成交？",
+    "covers": "sr captures, _i price raw preservation, tags and inner amount"
+  },
+  {
+    "input": "Spend Limit: $2500",
+    "expected": "<size=28>消费上限: <color=#2FC443>$2500</color></size>",
+    "covers": "r $$$1 currency semantics and emitted rich-text tags"
+  },
+  {
+    "input": "Drag 3x product into input slots",
+    "expected": "将 3 份产品拖入输入槽",
+    "covers": "corrected quantity capture excludes x"
+  },
+  {
+    "input": "- Property\n- Property\n- Property\n- Property\n+ 12 More",
+    "expected": "- 房产\n- 房产\n- 房产\n- 房产\n+ 另有 12 处",
+    "covers": "multiline key and replacement use actual newline characters"
+  },
+  {
+    "input": "+5 more",
+    "expected": "另有 5 项",
+    "covers": "plus sign is consumed instead of duplicated"
+  },
+  {
+    "input": "v0.4.6f13 Alternate",
+    "expected": "v0.4.6f13 替代版",
+    "covers": "version capture and no extra localization label"
+  },
+  {
+    "line_count": 1,
+    "input": "[PawnShop receipt]\n\nSour Diesel: 2 x $1,250 = $2,500\n\nTotal: $2,500 — Mick",
+    "expected": "[当铺收据]\n\n酸柴油：2 × $1,250 = $2,500\n\n总计：$2,500 — 米克"
+  },
+  {
+    "line_count": 2,
+    "input": "[PawnShop receipt]\n\nSour Diesel: 2 x $1,250 = $2,500\nOG Kush: 2 x $700 = $1,400\n\nTotal: $3,900 — Mick",
+    "expected": "[当铺收据]\n\n酸柴油：2 × $1,250 = $2,500\nOG库什：2 × $700 = $1,400\n\n总计：$3,900 — 米克"
+  },
+  {
+    "line_count": 3,
+    "input": "[PawnShop receipt]\n\nSour Diesel: 2 x $1,250 = $2,500\nOG Kush: 2 x $700 = $1,400\nOG Kush: 2 x $800 = $1,600\n\nTotal: $5,500 — Mick",
+    "expected": "[当铺收据]\n\n酸柴油：2 × $1,250 = $2,500\nOG库什：2 × $700 = $1,400\nOG库什：2 × $800 = $1,600\n\n总计：$5,500 — 米克"
+  },
+  {
+    "line_count": 4,
+    "input": "[PawnShop receipt]\n\nSour Diesel: 2 x $1,250 = $2,500\nOG Kush: 2 x $700 = $1,400\nOG Kush: 2 x $800 = $1,600\nOG Kush: 2 x $900 = $1,800\n\nTotal: $7,300 — Mick",
+    "expected": "[当铺收据]\n\n酸柴油：2 × $1,250 = $2,500\nOG库什：2 × $700 = $1,400\nOG库什：2 × $800 = $1,600\nOG库什：2 × $900 = $1,800\n\n总计：$7,300 — 米克"
+  },
+  {
+    "line_count": 5,
+    "input": "[PawnShop receipt]\n\nSour Diesel: 2 x $1,250 = $2,500\nOG Kush: 2 x $700 = $1,400\nOG Kush: 2 x $800 = $1,600\nOG Kush: 2 x $900 = $1,800\nOG Kush: 2 x $1,000 = $2,000\n\nTotal: $9,300 — Mick",
+    "expected": "[当铺收据]\n\n酸柴油：2 × $1,250 = $2,500\nOG库什：2 × $700 = $1,400\nOG库什：2 × $800 = $1,600\nOG库什：2 × $900 = $1,800\nOG库什：2 × $1,000 = $2,000\n\n总计：$9,300 — 米克"
+  },
+  {
+    "line_count": 6,
+    "input": "[PawnShop receipt]\n\nSour Diesel: 2 x $1,250 = $2,500\nOG Kush: 2 x $700 = $1,400\nOG Kush: 2 x $800 = $1,600\nOG Kush: 2 x $900 = $1,800\nOG Kush: 2 x $1,000 = $2,000\nOG Kush: 2 x $1,100 = $2,200\n\nTotal: $11,500 — Mick",
+    "expected": "[当铺收据]\n\n酸柴油：2 × $1,250 = $2,500\nOG库什：2 × $700 = $1,400\nOG库什：2 × $800 = $1,600\nOG库什：2 × $900 = $1,800\nOG库什：2 × $1,000 = $2,000\nOG库什：2 × $1,100 = $2,200\n\n总计：$11,500 — 米克"
+  },
+  {
+    "line_count": 7,
+    "input": "[PawnShop receipt]\n\nSour Diesel: 2 x $1,250 = $2,500\nOG Kush: 2 x $700 = $1,400\nOG Kush: 2 x $800 = $1,600\nOG Kush: 2 x $900 = $1,800\nOG Kush: 2 x $1,000 = $2,000\nOG Kush: 2 x $1,100 = $2,200\nOG Kush: 2 x $1,200 = $2,400\n\nTotal: $13,900 — Mick",
+    "expected": "[当铺收据]\n\n酸柴油：2 × $1,250 = $2,500\nOG库什：2 × $700 = $1,400\nOG库什：2 × $800 = $1,600\nOG库什：2 × $900 = $1,800\nOG库什：2 × $1,000 = $2,000\nOG库什：2 × $1,100 = $2,200\nOG库什：2 × $1,200 = $2,400\n\n总计：$13,900 — 米克"
+  },
+  {
+    "line_count": 8,
+    "input": "[PawnShop receipt]\n\nSour Diesel: 2 x $1,250 = $2,500\nOG Kush: 2 x $700 = $1,400\nOG Kush: 2 x $800 = $1,600\nOG Kush: 2 x $900 = $1,800\nOG Kush: 2 x $1,000 = $2,000\nOG Kush: 2 x $1,100 = $2,200\nOG Kush: 2 x $1,200 = $2,400\nOG Kush: 2 x $1,300 = $2,600\n\nTotal: $16,500 — Mick",
+    "expected": "[当铺收据]\n\n酸柴油：2 × $1,250 = $2,500\nOG库什：2 × $700 = $1,400\nOG库什：2 × $800 = $1,600\nOG库什：2 × $900 = $1,800\nOG库什：2 × $1,000 = $2,000\nOG库什：2 × $1,100 = $2,200\nOG库什：2 × $1,200 = $2,400\nOG库什：2 × $1,300 = $2,600\n\n总计：$16,500 — 米克"
+  },
+  {
+    "line_count": 9,
+    "input": "[PawnShop receipt]\n\nSour Diesel: 2 x $1,250 = $2,500\nOG Kush: 2 x $700 = $1,400\nOG Kush: 2 x $800 = $1,600\nOG Kush: 2 x $900 = $1,800\nOG Kush: 2 x $1,000 = $2,000\nOG Kush: 2 x $1,100 = $2,200\nOG Kush: 2 x $1,200 = $2,400\nOG Kush: 2 x $1,300 = $2,600\nOG Kush: 2 x $1,400 = $2,800\n\nTotal: $19,300 — Mick",
+    "expected": "[当铺收据]\n\n酸柴油：2 × $1,250 = $2,500\nOG库什：2 × $700 = $1,400\nOG库什：2 × $800 = $1,600\nOG库什：2 × $900 = $1,800\nOG库什：2 × $1,000 = $2,000\nOG库什：2 × $1,100 = $2,200\nOG库什：2 × $1,200 = $2,400\nOG库什：2 × $1,300 = $2,600\nOG库什：2 × $1,400 = $2,800\n\n总计：$19,300 — 米克"
+  },
+  {
+    "line_count": 10,
+    "input": "[PawnShop receipt]\n\nSour Diesel: 2 x $1,250 = $2,500\nOG Kush: 2 x $700 = $1,400\nOG Kush: 2 x $800 = $1,600\nOG Kush: 2 x $900 = $1,800\nOG Kush: 2 x $1,000 = $2,000\nOG Kush: 2 x $1,100 = $2,200\nOG Kush: 2 x $1,200 = $2,400\nOG Kush: 2 x $1,300 = $2,600\nOG Kush: 2 x $1,400 = $2,800\nOG Kush: 2 x $1,500 = $3,000\n\nTotal: $22,300 — Mick",
+    "expected": "[当铺收据]\n\n酸柴油：2 × $1,250 = $2,500\nOG库什：2 × $700 = $1,400\nOG库什：2 × $800 = $1,600\nOG库什：2 × $900 = $1,800\nOG库什：2 × $1,000 = $2,000\nOG库什：2 × $1,100 = $2,200\nOG库什：2 × $1,200 = $2,400\nOG库什：2 × $1,300 = $2,600\nOG库什：2 × $1,400 = $2,800\nOG库什：2 × $1,500 = $3,000\n\n总计：$22,300 — 米克"
+  },
+  {
+    "key_index": 214,
+    "input": "You owe John Smith <color=#54E717>$1,250</color>. Insert cash and exit stash to pay off your debt",
+    "expected": "你欠 约翰·史密斯 <color=#54E717>($1,250)</color>。放入现金并退出藏匿处以偿还债务。"
+  },
+  {
+    "key_index": 232,
+    "input": "The Sour Diesel <color=#19BEF0>$1,250</color>",
+    "expected": "酸柴油 <color=#19BEF0>$1,250</color>"
+  },
+  {
+    "key_index": 295,
+    "input": "John Smith will draw his daily wage of <color=#54E717>$1,250</color> from this locker",
+    "expected": "约翰·史密斯 将从这个储物柜中领取他 <color=#54E717>$1,250</color> 的日薪"
+  },
+  {
+    "key_index": 296,
+    "input": "Sarah Johnson will draw her daily wage of <color=#54E717>$1,250</color> from this locker",
+    "expected": "莎拉·约翰逊 将从这个储物柜中领取她 <color=#54E717>$1,250</color> 的日薪"
+  },
+  {
+    "key_index": 298,
+    "input": "We need 2x Sour Diesel. You've got 3 days to get it to us. Payment is $1,250.",
+    "expected": "我们需要 2 份 酸柴油。你必须在 3 天内交货。报酬是 $1,250。"
+  },
+  {
+    "case": "Initial Offer ungrouped four-digit amount",
+    "input": "Initial Offer $1250",
+    "expected": "初始出价：$1250"
+  },
+  {
+    "case": "The product ungrouped four-digit amount",
+    "input": "The Sour Diesel <color=#19BEF0>$1250</color>",
+    "expected": "酸柴油 <color=#19BEF0>$1250</color>"
+  },
+  {
+    "case": "How 'bout no-currency amount is not consumed by old r",
+    "old_r_key": "r:\"^How 'bout (\\$\\d{1,3}(?:,\\d{3})*)\\?$\"",
+    "sr_key": "sr:\"(?s)^How\\ 'bout\\ (?<v_AMOUNT_i>.+?)\\?$\"",
+    "sr_translation": "\"出价 ${v_AMOUNT_i} 怎么样？\"",
+    "input": "How 'bout 42?",
+    "expected": "出价 42 怎么样？"
+  },
+  {
+    "case": "How's no-currency amount is not consumed by old r",
+    "old_r_key": "r:\"^How's (\\$\\d{1,3}(?:,\\d{3})*)\\?$\"",
+    "sr_key": "sr:\"(?s)^How's\\ (?<v_AMOUNT_i>.+?)\\?$\"",
+    "sr_translation": "\"${v_AMOUNT_i} 呢？\"",
+    "input": "How's 42?",
+    "expected": "42 呢？"
+  },
+  {
+    "input": "Excellent choice, __TEST_PERSON__",
+    "expected": "选得不错，__TEST_PERSON__。",
+    "rule_key": "sr:\"(?s)^Excellent\\ choice,\\ (?<v_formal_address>.+?)$\"",
+    "covers": "generated template: Excellent choice, formal_address"
+  },
+  {
+    "input": "How does 42 sound?",
+    "expected": "你觉得 42 怎么样？",
+    "rule_key": "sr:\"(?s)^How\\ does\\ (?<v_AMOUNT_i>.+?)\\ sound\\?$\"",
+    "covers": "generated template: How does <AMOUNT> sound?"
+  },
+  {
+    "input": "I can give you 42",
+    "expected": "我可以给你 42",
+    "rule_key": "sr:\"(?s)^I\\ can\\ give\\ you\\ (?<v_AMOUNT_i>.+?)$\"",
+    "covers": "generated template: I can give you <AMOUNT>"
+  },
+  {
+    "input": "Deal (42)",
+    "expected": "成交（42）",
+    "rule_key": "sr:\"(?s)^Deal\\ \\((?<v_SIGNING_FEE_i>.+?)\\)$\"",
+    "covers": "generated template: Deal (<SIGNING_FEE>)"
+  },
+  {
+    "input": "Hey, my friend said you were selling some good stuff. Could I get __TEST_PERSON__? I'll pay 42 for it.",
+    "expected": "嘿，朋友说你货不错。来 __TEST_PERSON__？我出 42。",
+    "rule_key": "sr:\"(?s)^Hey,\\ my\\ friend\\ said\\ you\\ were\\ selling\\ some\\ good\\ stuff\\.\\ Could\\ I\\ get\\ (?<v_PRODUCT>.+?)\\?\\ I'll\\ pay\\ (?<v_PRICE_i>.+?)\\ for\\ it\\.$\"",
+    "covers": "generated template: Hey, my friend said you were selling some good stuff. Could I get <PRODUCT>? I'll pay <PRICE> for it."
+  },
+  {
+    "input": "Hello, I liked that sample you gave me. Can I get __TEST_PERSON__? I can pay 42",
+    "expected": "嘿，你那样品我喜欢。再来 __TEST_PERSON__？我出 42。",
+    "rule_key": "sr:\"(?s)^Hello,\\ I\\ liked\\ that\\ sample\\ you\\ gave\\ me\\.\\ Can\\ I\\ get\\ (?<v_PRODUCT>.+?)\\?\\ I\\ can\\ pay\\ (?<v_PRICE_i>.+?)$\"",
+    "covers": "generated template: Hello, I liked that sample you gave me. Can I get <PRODUCT>? I can pay <PRICE>"
+  },
+  {
+    "input": "Great, I'll meet you __TEST_PERSON__ between 42 and 42.",
+    "expected": "太好了，42 到 42，我在 __TEST_PERSON__ 等你。",
+    "rule_key": "sr:\"(?s)^Great,\\ I'll\\ meet\\ you\\ (?<v_LOCATION>.+?)\\ between\\ (?<v_WINDOW_START_i>.+?)\\ and\\ (?<v_WINDOW_END_i>.+?)\\.$\"",
+    "covers": "generated template: Great, I'll meet you <LOCATION> between <WINDOW_START> and <WINDOW_END>."
+  },
+  {
+    "input": "Hey, if you got __TEST_PERSON__ I'll pay 42 for it. Deal?",
+    "expected": "嘿，你有 __TEST_PERSON__ 吗？我出 42 买。成交吗？",
+    "rule_key": "sr:\"(?s)^Hey,\\ if\\ you\\ got\\ (?<v_PRODUCT>.+?)\\ I'll\\ pay\\ (?<v_PRICE_i>.+?)\\ for\\ it\\.\\ Deal\\?$\"",
+    "covers": "generated template: Hey, if you got <PRODUCT> I'll pay <PRICE> for it. Deal?"
+  },
+  {
+    "input": "Hey, have you got __TEST_PERSON__? I'll pay 42 for it",
+    "expected": "嘿，你有 __TEST_PERSON__ 吗？我出 42 买。",
+    "rule_key": "sr:\"(?s)^Hey,\\ have\\ you\\ got\\ (?<v_PRODUCT>.+?)\\?\\ I'll\\ pay\\ (?<v_PRICE_i>.+?)\\ for\\ it$\"",
+    "covers": "generated template: Hey, have you got <PRODUCT>? I'll pay <PRICE> for it"
+  },
+  {
+    "input": "Thanks. Hey my friend __TEST_PERSON__ might be interested in your stuff. You should go talk to them.",
+    "expected": "谢了。我朋友 __TEST_PERSON__ 可能想要你的货，你去找他们。",
+    "rule_key": "sr:\"(?s)^Thanks\\.\\ Hey\\ my\\ friend\\ (?<v_NAME>.+?)\\ might\\ be\\ interested\\ in\\ your\\ stuff\\.\\ You\\ should\\ go\\ talk\\ to\\ them\\.$\"",
+    "covers": "generated template: Thanks. Hey my friend <NAME> might be interested in your stuff. You should go talk to them."
+  },
+  {
+    "input": "Much appreciated. Maybe go talk to __TEST_PERSON__. I think they'd like your product",
+    "expected": "太感谢了。你可以去找 __TEST_PERSON__ 聊聊，我想他们会喜欢你的货。",
+    "rule_key": "sr:\"(?s)^Much\\ appreciated\\.\\ Maybe\\ go\\ talk\\ to\\ (?<v_NAME>.+?)\\.\\ I\\ think\\ they'd\\ like\\ your\\ product$\"",
+    "covers": "generated template: Much appreciated. Maybe go talk to <NAME>. I think they'd like your product"
+  },
+  {
+    "input": "Thank you. You should go talk to __TEST_PERSON__ - they might be able to help you move your stuff.",
+    "expected": "谢了。去找 __TEST_PERSON__，他们也许能帮你把货出手。",
+    "rule_key": "sr:\"(?s)^Thank\\ you\\.\\ You\\ should\\ go\\ talk\\ to\\ (?<v_NAME>.+?)\\ \\-\\ they\\ might\\ be\\ able\\ to\\ help\\ you\\ move\\ your\\ stuff\\.$\"",
+    "covers": "generated template: Thank you. You should go talk to <NAME> - they might be able to help you move your stuff."
+  },
+  {
+    "input": "Need me __TEST_PERSON__! I'll pay 42 yeah??",
+    "expected": "给我来点 __TEST_PERSON__！我出 42，怎么样？",
+    "rule_key": "sr:\"(?s)^Need\\ me\\ (?<v_PRODUCT>.+?)!\\ I'll\\ pay\\ (?<v_PRICE_i>.+?)\\ yeah\\?\\?$\"",
+    "covers": "generated template: Need me <PRODUCT>! I'll pay <PRICE> yeah??"
+  },
+  {
+    "input": "You got some good stuff! You should go talk to __TEST_PERSON__ - I think they'll like your stuff",
+    "expected": "你有好货啊！去找 __TEST_PERSON__ 聊聊吧，我觉得他们会喜欢你的货。",
+    "rule_key": "sr:\"(?s)^You\\ got\\ some\\ good\\ stuff!\\ You\\ should\\ go\\ talk\\ to\\ (?<v_NAME>.+?)\\ \\-\\ I\\ think\\ they'll\\ like\\ your\\ stuff$\"",
+    "covers": "generated template: You got some good stuff! You should go talk to <NAME> - I think they'll like your stuff"
+  },
+  {
+    "input": "Sick as, I'll meet you __TEST_PERSON__ between 42 and 42.",
+    "expected": "爽啊，42 到 42，我在 __TEST_PERSON__ 见你。",
+    "rule_key": "sr:\"(?s)^Sick\\ as,\\ I'll\\ meet\\ you\\ (?<v_LOCATION>.+?)\\ between\\ (?<v_WINDOW_START_i>.+?)\\ and\\ (?<v_WINDOW_END_i>.+?)\\.$\"",
+    "covers": "generated template: Sick as, I'll meet you <LOCATION> between <WINDOW_START> and <WINDOW_END>."
+  },
+  {
+    "input": "Hey dog, I need __TEST_PERSON__. I'll pay 42. Deal?",
+    "expected": "嘿，兄弟，我要 __TEST_PERSON__。我出 42。成交吗？",
+    "rule_key": "sr:\"(?s)^Hey\\ dog,\\ I\\ need\\ (?<v_PRODUCT>.+?)\\.\\ I'll\\ pay\\ (?<v_PRICE_i>.+?)\\.\\ Deal\\?$\"",
+    "covers": "generated template: Hey dog, I need <PRODUCT>. I'll pay <PRICE>. Deal?"
+  },
+  {
+    "input": "Whats up bro, I'm after __TEST_PERSON__. I can pay 42 for it.",
+    "expected": "兄弟，我要 __TEST_PERSON__，出 42。",
+    "rule_key": "sr:\"(?s)^Whats\\ up\\ bro,\\ I'm\\ after\\ (?<v_PRODUCT>.+?)\\.\\ I\\ can\\ pay\\ (?<v_PRICE_i>.+?)\\ for\\ it\\.$\"",
+    "covers": "generated template: Whats up bro, I'm after <PRODUCT>. I can pay <PRICE> for it."
+  },
+  {
+    "input": "Thank you my dude. You should go talk to __TEST_PERSON__ - I think they'll like your stuff",
+    "expected": "谢了，兄弟。去找 __TEST_PERSON__ 聊聊吧，我觉得他们会喜欢你的货。",
+    "rule_key": "sr:\"(?s)^Thank\\ you\\ my\\ dude\\.\\ You\\ should\\ go\\ talk\\ to\\ (?<v_NAME>.+?)\\ \\-\\ I\\ think\\ they'll\\ like\\ your\\ stuff$\"",
+    "covers": "generated template: Thank you my dude. You should go talk to <NAME> - I think they'll like your stuff"
+  },
+  {
+    "input": "We need __TEST_PERSON__. You've got __TEST_PERSON__ days to get it to us. Payment is __TEST_PERSON__.",
+    "expected": "我们要 __TEST_PERSON__。你有 __TEST_PERSON__ 天时间把货交给我们。报酬是 __TEST_PERSON__。",
+    "rule_key": "sr:\"(?s)^We\\ need\\ (?<v_PRODUCT>.+?)\\.\\ You've\\ got\\ (?<v_DUE_DAYS>.+?)\\ days\\ to\\ get\\ it\\ to\\ us\\.\\ Payment\\ is\\ (?<v_PAYMENT>.+?)\\.$\"",
+    "covers": "generated template: We need <PRODUCT>. You've got <DUE_DAYS> days to get it to us. Payment is <PAYMENT>."
+  },
+  {
+    "input": "The Shitbox (42)",
+    "expected": "破车（42）",
+    "rule_key": "sr:\"(?s)^The\\ Shitbox\\ \\((?<v_PRICE_i>.+?)\\)$\"",
+    "covers": "generated template: The Shitbox (<PRICE>)"
+  },
+  {
+    "input": "The Dinkler (42)",
+    "expected": "丁克勒（42）",
+    "rule_key": "sr:\"(?s)^The\\ Dinkler\\ \\((?<v_PRICE_i>.+?)\\)$\"",
+    "covers": "generated template: The Dinkler (<PRICE>)"
+  },
+  {
+    "input": "The Cheetah (42)",
+    "expected": "猎豹（42）",
+    "rule_key": "sr:\"(?s)^The\\ Cheetah\\ \\((?<v_PRICE_i>.+?)\\)$\"",
+    "covers": "generated template: The Cheetah (<PRICE>)"
+  },
+  {
+    "input": "The Laundromat (42)",
+    "expected": "自助洗衣店（42）",
+    "rule_key": "sr:\"(?s)^The\\ Laundromat\\ \\((?<v_PRICE_i>.+?)\\)$\"",
+    "covers": "generated template: The Laundromat (<PRICE>)"
+  },
+  {
+    "input": "Taco Ticklers (42)",
+    "expected": "玉米饼乐园（42）",
+    "rule_key": "sr:\"(?s)^Taco\\ Ticklers\\ \\((?<v_PRICE_i>.+?)\\)$\"",
+    "covers": "generated template: Taco Ticklers (<PRICE>)"
+  },
+  {
+    "input": "The storage unit at Stash & Dash (42)",
+    "expected": "藏货速递的储物间（42）",
+    "rule_key": "sr:\"(?s)^The\\ storage\\ unit\\ at\\ Stash\\ \\&\\ Dash\\ \\((?<v_PRICE_i>.+?)\\)$\"",
+    "covers": "generated template: The storage unit at Stash & Dash (<PRICE>)"
+  },
+  {
+    "input": "The Docks Warehouse (42)",
+    "expected": "码头仓库（42）",
+    "rule_key": "sr:\"(?s)^The\\ Docks\\ Warehouse\\ \\((?<v_PRICE_i>.+?)\\)$\"",
+    "covers": "generated template: The Docks Warehouse (<PRICE>)"
+  },
+  {
+    "input": "Hmm... Oscar seen one lying around somewhere in <color=blue>__TEST_PERSON__</color> I think...",
+    "expected": "嗯……奥斯卡好像在 <color=blue>__TEST_PERSON__</color> 某处见过一个……",
+    "rule_key": "sr:\"(?s)^Hmm\\.\\.\\.\\ Oscar\\ seen\\ one\\ lying\\ around\\ somewhere\\ in\\ <color=blue>(?<v_REGION>.+?)</color>\\ I\\ think\\.\\.\\.$\"",
+    "covers": "generated template: Hmm... Oscar seen one lying around somewhere in <color=blue><REGION></color> I think..."
+  },
+  {
+    "input": "Working on it. Should be ready in around 42",
+    "expected": "我正在处理。大约 42 后就能准备好。",
+    "rule_key": "sr:\"(?s)^Working\\ on\\ it\\.\\ Should\\ be\\ ready\\ in\\ around\\ (?<v_TIME_i>.+?)$\"",
+    "covers": "generated template: Working on it. Should be ready in around <TIME>"
+  },
+  {
+    "input": "Hey, that drop is ready __TEST_PERSON__",
+    "expected": "嘿，藏货点准备好了，在 __TEST_PERSON__。",
+    "rule_key": "sr:\"(?s)^Hey,\\ that\\ drop\\ is\\ ready\\ (?<v_LOCATION>.+?)$\"",
+    "covers": "generated template: Hey, that drop is ready <LOCATION>"
+  },
+  {
+    "input": "When you're ready please deposit 42 into my stash box - your debt is still unpaid.",
+    "expected": "你准备好后，把 42 存进我的藏匿箱里——你还欠着债呢。",
+    "rule_key": "sr:\"(?s)^When\\ you're\\ ready\\ please\\ deposit\\ (?<v_DEBT_i>.+?)\\ into\\ my\\ stash\\ box\\ \\-\\ your\\ debt\\ is\\ still\\ unpaid\\.$\"",
+    "covers": "generated template: When you're ready please deposit <DEBT> into my stash box - your debt is still unpaid."
+  },
+  {
+    "input": "How 'bout 42?",
+    "expected": "出价 42 怎么样？",
+    "rule_key": "sr:\"(?s)^How\\ 'bout\\ (?<v_AMOUNT_i>.+?)\\?$\"",
+    "covers": "generated template: How 'bout <AMOUNT>?"
+  },
+  {
+    "input": "How's 42?",
+    "expected": "42 呢？",
+    "rule_key": "sr:\"(?s)^How's\\ (?<v_AMOUNT_i>.+?)\\?$\"",
+    "covers": "generated template: How's <AMOUNT>?"
+  },
+  {
+    "input": "Agreed. I'll be __TEST_PERSON__ for the next 6 hours.",
+    "expected": "好啊，接下来 6 小时我都会在__TEST_PERSON__。",
+    "rule_key": "sr:\"(?s)^Agreed\\.\\ I'll\\ be\\ (?<v_LOCATION>.+?)\\ for\\ the\\ next\\ 6\\ hours\\.$\"",
+    "covers": "generated template: Agreed. I'll be <LOCATION> for the next 6 hours."
+  },
+  {
+    "input": "So you'd like to reassign me to __TEST_PERSON__? I'll go there as soon as I finish my current task.",
+    "expected": "你想把我调到__TEST_PERSON__吗？等我完成手头的工作就过去。",
+    "rule_key": "sr:\"(?s)^So\\ you'd\\ like\\ to\\ reassign\\ me\\ to\\ (?<v_LOCATION>.+?)\\?\\ I'll\\ go\\ there\\ as\\ soon\\ as\\ I\\ finish\\ my\\ current\\ task\\.$\"",
+    "covers": "generated template: So you'd like to reassign me to <LOCATION>? I'll go there as soon as I finish my current task."
+  },
+  {
+    "input": "That'll be 42 for the __TEST_PERSON__. Sound good?",
+    "expected": "一共是 42，买 __TEST_PERSON__。怎么样？",
+    "rule_key": "sr:\"(?s)^That'll\\ be\\ (?<v_PRICE_i>.+?)\\ for\\ the\\ (?<v_NAME>.+?)\\.\\ Sound\\ good\\?$\"",
+    "covers": "generated template: That'll be <PRICE> for the <NAME>. Sound good?"
+  },
+  {
+    "input": "Hey, my friend recommended you. Can I get __TEST_PERSON__? I'll pay 42.",
+    "expected": "嘿，朋友推荐我来找你。能给我 __TEST_PERSON__ 吗？我出 42。",
+    "rule_key": "sr:\"(?s)^Hey,\\ my\\ friend\\ recommended\\ you\\.\\ Can\\ I\\ get\\ (?<v_PRODUCT>.+?)\\?\\ I'll\\ pay\\ (?<v_PRICE_i>.+?)\\.$\"",
+    "covers": "generated template: Hey, my friend recommended you. Can I get <PRODUCT>? I'll pay <PRICE>."
+  },
+  {
+    "input": "Hey, that sample was some good stuff. Could I get __TEST_PERSON__? I'll pay 42 for it.",
+    "expected": "嘿，样品够意思。再来 __TEST_PERSON__？我出 42。",
+    "rule_key": "sr:\"(?s)^Hey,\\ that\\ sample\\ was\\ some\\ good\\ stuff\\.\\ Could\\ I\\ get\\ (?<v_PRODUCT>.+?)\\?\\ I'll\\ pay\\ (?<v_PRICE_i>.+?)\\ for\\ it\\.$\"",
+    "covers": "generated template: Hey, that sample was some good stuff. Could I get <PRODUCT>? I'll pay <PRICE> for it."
+  },
+  {
+    "input": "Hey, can I get __TEST_PERSON__? I'll pay 42",
+    "expected": "嘿，能给我 __TEST_PERSON__ 吗？我出 42。",
+    "rule_key": "sr:\"(?s)^Hey,\\ can\\ I\\ get\\ (?<v_PRODUCT>.+?)\\?\\ I'll\\ pay\\ (?<v_PRICE_i>.+?)$\"",
+    "covers": "generated template: Hey, can I get <PRODUCT>? I'll pay <PRICE>"
+  },
+  {
+    "input": "Cheers. My friend __TEST_PERSON__ might like your stuff. Go check them out",
+    "expected": "谢啦。我朋友 __TEST_PERSON__ 可能喜欢你的货，去会会他们。",
+    "rule_key": "sr:\"(?s)^Cheers\\.\\ My\\ friend\\ (?<v_NAME>.+?)\\ might\\ like\\ your\\ stuff\\.\\ Go\\ check\\ them\\ out$\"",
+    "covers": "generated template: Cheers. My friend <NAME> might like your stuff. Go check them out"
+  },
+  {
+    "input": "Very nice. __TEST_PERSON__ might be interested. You should go talk to them.",
+    "expected": "不错。__TEST_PERSON__ 可能感兴趣，你去跟他们说。",
+    "rule_key": "sr:\"(?s)^Very\\ nice\\.\\ (?<v_NAME>.+?)\\ might\\ be\\ interested\\.\\ You\\ should\\ go\\ talk\\ to\\ them\\.$\"",
+    "covers": "generated template: Very nice. <NAME> might be interested. You should go talk to them."
+  },
+  {
+    "input": "Thanks. Hey, my friend __TEST_PERSON__ is a dealer and can help you move your product. You should go speak to them.",
+    "expected": "谢了。我朋友 __TEST_PERSON__ 是经销商，能帮你把货出手，去找他们。",
+    "rule_key": "sr:\"(?s)^Thanks\\.\\ Hey,\\ my\\ friend\\ (?<v_NAME>.+?)\\ is\\ a\\ dealer\\ and\\ can\\ help\\ you\\ move\\ your\\ product\\.\\ You\\ should\\ go\\ speak\\ to\\ them\\.$\"",
+    "covers": "generated template: Thanks. Hey, my friend <NAME> is a dealer and can help you move your product. You should go speak to them."
+  },
+  {
+    "input": "Good!! I'll see u __TEST_PERSON__ between 42 and 42.",
+    "expected": "太好了！我会在 __TEST_PERSON__ 等你，时间是 42 到 42。",
+    "rule_key": "sr:\"(?s)^Good!!\\ I'll\\ see\\ u\\ (?<v_LOCATION>.+?)\\ between\\ (?<v_WINDOW_START_i>.+?)\\ and\\ (?<v_WINDOW_END_i>.+?)\\.$\"",
+    "covers": "generated template: Good!! I'll see u <LOCATION> between <WINDOW_START> and <WINDOW_END>."
+  },
+  {
+    "input": "I NEED __TEST_PERSON__. I GOT 42. DEAL?",
+    "expected": "我要 __TEST_PERSON__！我出 42。成交？",
+    "rule_key": "sr:\"(?s)^I\\ NEED\\ (?<v_PRODUCT>.+?)\\.\\ I\\ GOT\\ (?<v_PRICE_i>.+?)\\.\\ DEAL\\?$\"",
+    "covers": "generated template: I NEED <PRODUCT>. I GOT <PRICE>. DEAL?"
+  },
+  {
+    "input": "I'm after __TEST_PERSON__. I can pay 42 for it Deal??",
+    "expected": "我想要 __TEST_PERSON__，可以出 42。成交吗？",
+    "rule_key": "sr:\"(?s)^I'm\\ after\\ (?<v_PRODUCT>.+?)\\.\\ I\\ can\\ pay\\ (?<v_PRICE_i>.+?)\\ for\\ it\\ Deal\\?\\?$\"",
+    "covers": "generated template: I'm after <PRODUCT>. I can pay <PRICE> for it Deal??"
+  },
+  {
+    "input": "Yes thank you!!. Hey my friend __TEST_PERSON__ might be interested in your stuff. You should go talk to them.",
+    "expected": "太感谢了！！我朋友 __TEST_PERSON__ 可能想要你的货，你去找他们。",
+    "rule_key": "sr:\"(?s)^Yes\\ thank\\ you!!\\.\\ Hey\\ my\\ friend\\ (?<v_NAME>.+?)\\ might\\ be\\ interested\\ in\\ your\\ stuff\\.\\ You\\ should\\ go\\ talk\\ to\\ them\\.$\"",
+    "covers": "generated template: Yes thank you!!. Hey my friend <NAME> might be interested in your stuff. You should go talk to them."
+  },
+  {
+    "input": "Finally some good stuff! Maybe go talk to __TEST_PERSON__. I think they'd like your product",
+    "expected": "终于来真货了！去跟 __TEST_PERSON__ 说说，他们会喜欢。",
+    "rule_key": "sr:\"(?s)^Finally\\ some\\ good\\ stuff!\\ Maybe\\ go\\ talk\\ to\\ (?<v_NAME>.+?)\\.\\ I\\ think\\ they'd\\ like\\ your\\ product$\"",
+    "covers": "generated template: Finally some good stuff! Maybe go talk to <NAME>. I think they'd like your product"
+  },
+  {
+    "input": "Ok, I'll meet you __TEST_PERSON__ between 42 and 42.",
+    "expected": "行，42 到 42，我在 __TEST_PERSON__ 等你。",
+    "rule_key": "sr:\"(?s)^Ok,\\ I'll\\ meet\\ you\\ (?<v_LOCATION>.+?)\\ between\\ (?<v_WINDOW_START_i>.+?)\\ and\\ (?<v_WINDOW_END_i>.+?)\\.$\"",
+    "covers": "generated template: Ok, I'll meet you <LOCATION> between <WINDOW_START> and <WINDOW_END>."
+  },
+  {
+    "input": "Sweet as homie, I'll meet you __TEST_PERSON__ between 42 and 42.",
+    "expected": "漂亮，兄弟！42 到 42，我在 __TEST_PERSON__ 见你。",
+    "rule_key": "sr:\"(?s)^Sweet\\ as\\ homie,\\ I'll\\ meet\\ you\\ (?<v_LOCATION>.+?)\\ between\\ (?<v_WINDOW_START_i>.+?)\\ and\\ (?<v_WINDOW_END_i>.+?)\\.$\"",
+    "covers": "generated template: Sweet as homie, I'll meet you <LOCATION> between <WINDOW_START> and <WINDOW_END>."
+  },
+  {
+    "input": "Cheers bro, I'll meet you __TEST_PERSON__ between 42 and 42.",
+    "expected": "谢了，兄弟！我会在 __TEST_PERSON__ 等你，时间是 42 到 42。",
+    "rule_key": "sr:\"(?s)^Cheers\\ bro,\\ I'll\\ meet\\ you\\ (?<v_LOCATION>.+?)\\ between\\ (?<v_WINDOW_START_i>.+?)\\ and\\ (?<v_WINDOW_END_i>.+?)\\.$\"",
+    "covers": "generated template: Cheers bro, I'll meet you <LOCATION> between <WINDOW_START> and <WINDOW_END>."
+  },
+  {
+    "input": "Ayo dawg, if you got __TEST_PERSON__ I'll pay 42 for it. Deal?",
+    "expected": "哟，有 __TEST_PERSON__ 的话我出 42。成交？",
+    "rule_key": "sr:\"(?s)^Ayo\\ dawg,\\ if\\ you\\ got\\ (?<v_PRODUCT>.+?)\\ I'll\\ pay\\ (?<v_PRICE_i>.+?)\\ for\\ it\\.\\ Deal\\?$\"",
+    "covers": "generated template: Ayo dawg, if you got <PRODUCT> I'll pay <PRICE> for it. Deal?"
+  },
+  {
+    "input": "Ay bro you got __TEST_PERSON__? I'll pay 42 for it",
+    "expected": "嘿，兄弟，你有 __TEST_PERSON__ 吗？我愿意出 42。",
+    "rule_key": "sr:\"(?s)^Ay\\ bro\\ you\\ got\\ (?<v_PRODUCT>.+?)\\?\\ I'll\\ pay\\ (?<v_PRICE_i>.+?)\\ for\\ it$\"",
+    "covers": "generated template: Ay bro you got <PRODUCT>? I'll pay <PRICE> for it"
+  },
+  {
+    "input": "Thanks bro. Hey my friend __TEST_PERSON__ might be interested in your stuff. You should go talk to them.",
+    "expected": "谢了兄弟。我朋友 __TEST_PERSON__ 可能想要你的货，你去找他们。",
+    "rule_key": "sr:\"(?s)^Thanks\\ bro\\.\\ Hey\\ my\\ friend\\ (?<v_NAME>.+?)\\ might\\ be\\ interested\\ in\\ your\\ stuff\\.\\ You\\ should\\ go\\ talk\\ to\\ them\\.$\"",
+    "covers": "generated template: Thanks bro. Hey my friend <NAME> might be interested in your stuff. You should go talk to them."
+  },
+  {
+    "input": "Much appreciated mulatto. Maybe go talk to __TEST_PERSON__. I think they'd like your product",
+    "expected": "多谢了，混血儿。去找找 __TEST_PERSON__ 吧，我觉得他们会喜欢你的货。",
+    "rule_key": "sr:\"(?s)^Much\\ appreciated\\ mulatto\\.\\ Maybe\\ go\\ talk\\ to\\ (?<v_NAME>.+?)\\.\\ I\\ think\\ they'd\\ like\\ your\\ product$\"",
+    "covers": "generated template: Much appreciated mulatto. Maybe go talk to <NAME>. I think they'd like your product"
+  },
+  {
+    "input": "__TEST_PERSON__ will draw their daily wage from this briefcase.",
+    "expected": "__TEST_PERSON__ 将从这个公文包领取每日工资。",
+    "rule_key": "sr:\"(?s)^(?<v_Employee>.+?)\\ will\\ draw\\ their\\ daily\\ wage\\ from\\ this\\ briefcase\\.$\"",
+    "covers": "generated template: <Employee> will draw their daily wage from this briefcase."
+  },
+  {
+    "input": "The Veeper (42)",
+    "expected": "毒蛇（42）",
+    "rule_key": "sr:\"(?s)^The\\ Veeper\\ \\((?<v_PRICE_i>.+?)\\)$\"",
+    "covers": "generated template: The Veeper (<PRICE>)"
+  },
+  {
+    "input": "The Hounddog (42)",
+    "expected": "猎犬（42）",
+    "rule_key": "sr:\"(?s)^The\\ Hounddog\\ \\((?<v_PRICE_i>.+?)\\)$\"",
+    "covers": "generated template: The Hounddog (<PRICE>)"
+  },
+  {
+    "input": "So you'd like to purchase the __TEST_PERSON__?",
+    "expected": "你想买这辆__TEST_PERSON__吗？",
+    "rule_key": "sr:\"(?s)^So\\ you'd\\ like\\ to\\ purchase\\ the\\ (?<v_VEHICLE>.+?)\\?$\"",
+    "covers": "generated template: So you'd like to purchase the <VEHICLE>?"
+  },
+  {
+    "input": "Great. It'll be 42 for the week, ok?",
+    "expected": "好。租一周要 42，可以吗？",
+    "rule_key": "sr:\"(?s)^Great\\.\\ It'll\\ be\\ (?<v_PRICE_i>.+?)\\ for\\ the\\ week,\\ ok\\?$\"",
+    "covers": "generated template: Great. It'll be <PRICE> for the week, ok?"
+  },
+  {
+    "input": "The Post Office (42)",
+    "expected": "邮局（42）",
+    "rule_key": "sr:\"(?s)^The\\ Post\\ Office\\ \\((?<v_PRICE_i>.+?)\\)$\"",
+    "covers": "generated template: The Post Office (<PRICE>)"
+  },
+  {
+    "input": "So you'd like to purchase __TEST_PERSON__? Payments are made from your online balance.",
+    "expected": "你想买下 __TEST_PERSON__ 吗？费用会从你的在线余额中扣除。",
+    "rule_key": "sr:\"(?s)^So\\ you'd\\ like\\ to\\ purchase\\ (?<v_BUSINESS>.+?)\\?\\ Payments\\ are\\ made\\ from\\ your\\ online\\ balance\\.$\"",
+    "covers": "generated template: So you'd like to purchase <BUSINESS>? Payments are made from your online balance."
+  },
+  {
+    "input": "The Bungalow (42)",
+    "expected": "平房（42）",
+    "rule_key": "sr:\"(?s)^The\\ Bungalow\\ \\((?<v_PRICE_i>.+?)\\)$\"",
+    "covers": "generated template: The Bungalow (<PRICE>)"
+  },
+  {
+    "input": "Hyland Manor (42)",
+    "expected": "海兰庄园（42）",
+    "rule_key": "sr:\"(?s)^Hyland\\ Manor\\ \\((?<v_PRICE_i>.+?)\\)$\"",
+    "covers": "generated template: Hyland Manor (<PRICE>)"
+  },
+  {
+    "input": "I wanna help you, but I'll be out of a job if the mayor finds out. I'll need 42 for it to be worth the risk.",
+    "expected": "我想帮你，但要是市长发现了，我就会丢掉工作。这事值得冒险的话，你得给我 42。",
+    "rule_key": "sr:\"(?s)^I\\ wanna\\ help\\ you,\\ but\\ I'll\\ be\\ out\\ of\\ a\\ job\\ if\\ the\\ mayor\\ finds\\ out\\.\\ I'll\\ need\\ (?<v_PRICE_i>.+?)\\ for\\ it\\ to\\ be\\ worth\\ the\\ risk\\.$\"",
+    "covers": "generated template: I wanna help you, but I'll be out of a job if the mayor finds out. I'll need <PRICE> for it to be worth the risk."
+  },
+  {
+    "input": "Oh yes very good! 42 for room, yes?",
+    "expected": "哦，太好了！房间是 42，对吗？",
+    "rule_key": "sr:\"(?s)^Oh\\ yes\\ very\\ good!\\ (?<v_PRICE_i>.+?)\\ for\\ room,\\ yes\\?$\"",
+    "covers": "generated template: Oh yes very good! <PRICE> for room, yes?"
+  },
+  {
+    "input": "Oh! and I remember hearing <color=blue>__TEST_PERSON__</color> has one! Sorry, Oscar isn't very good with names. Hope this helps.",
+    "expected": "哦！我想起来了，<color=blue>__TEST_PERSON__</color>好像有一个！抱歉，奥斯卡不太记得名字。希望这能帮到你。",
+    "rule_key": "sr:\"(?s)^Oh!\\ and\\ I\\ remember\\ hearing\\ <color=blue>(?<v_NPC_DESCRIPTION>.+?)</color>\\ has\\ one!\\ Sorry,\\ Oscar\\ isn't\\ very\\ good\\ with\\ names\\.\\ Hope\\ this\\ helps\\.$\"",
+    "covers": "generated template: Oh! and I remember hearing <color=blue><NPC_DESCRIPTION></color> has one! Sorry, Oscar isn't very good with names. Hope this helps."
+  },
+  {
+    "input": "Copy. I'll message you when it's ready in about 42.",
+    "expected": "收到。准备好后我会给你发消息，大约还要 42。",
+    "rule_key": "sr:\"(?s)^Copy\\.\\ I'll\\ message\\ you\\ when\\ it's\\ ready\\ in\\ about\\ (?<v_TIME_i>.+?)\\.$\"",
+    "covers": "generated template: Copy. I'll message you when it's ready in about <TIME>."
+  },
+  {
+    "input": "Your drop is ready. Grab it __TEST_PERSON__",
+    "expected": "你的藏货点好了。去__TEST_PERSON__拿。",
+    "rule_key": "sr:\"(?s)^Your\\ drop\\ is\\ ready\\.\\ Grab\\ it\\ (?<v_LOCATION>.+?)$\"",
+    "covers": "generated template: Your drop is ready. Grab it <LOCATION>"
+  },
+  {
+    "input": "Just reminding you that you owe me 42. Please deposit the amount into my stash box when you're ready.",
+    "expected": "提醒一下，你还欠我 42。准备好后，请把钱存进我藏匿处的箱子里。",
+    "rule_key": "sr:\"(?s)^Just\\ reminding\\ you\\ that\\ you\\ owe\\ me\\ (?<v_DEBT_i>.+?)\\.\\ Please\\ deposit\\ the\\ amount\\ into\\ my\\ stash\\ box\\ when\\ you're\\ ready\\.$\"",
+    "covers": "generated template: Just reminding you that you owe me <DEBT>. Please deposit the amount into my stash box when you're ready."
+  },
+  {
+    "input": "There is a <h1>map</h> on your phone. Press __TEST_PERSON__ to quickly open it.",
+    "expected": "你手机上有一张<h1>地图</h>。按__TEST_PERSON__可快速打开。",
+    "rule_key": "sr:\"(?s)^There\\ is\\ a\\ <h1>map</h>\\ on\\ your\\ phone\\.\\ Press\\ (?<v_Input_OpenMap>.+?)\\ to\\ quickly\\ open\\ it\\.$\"",
+    "covers": "generated template: There is a <h1>map</h> on your phone. Press <Input_OpenMap> to quickly open it."
+  },
+  {
+    "input": "Press and hold __TEST_PERSON__ while hovering an object to pick it up.",
+    "expected": "将鼠标悬停在物体上时按住__TEST_PERSON__即可拾取。",
+    "rule_key": "sr:\"(?s)^Press\\ and\\ hold\\ (?<v_Input_SecondaryClick>.+?)\\ while\\ hovering\\ an\\ object\\ to\\ pick\\ it\\ up\\.$\"",
+    "covers": "generated template: Press and hold <Input_SecondaryClick> while hovering an object to pick it up."
+  },
+  {
+    "input": "Thank you, __TEST_PERSON__",
+    "expected": "谢谢你，__TEST_PERSON__",
+    "rule_key": "sr:\"(?s)^Thank\\ you,\\ (?<v_formal_address>.+?)$\"",
+    "covers": "generated template: Thank you, formal_address"
+  },
+  {
+    "input": "Best I can do is 42",
+    "expected": "我最多只能出42",
+    "rule_key": "sr:\"(?s)^Best\\ I\\ can\\ do\\ is\\ (?<v_AMOUNT_i>.+?)$\"",
+    "covers": "generated template: Best I can do is <AMOUNT>"
+  },
+  {
+    "input": "Let's call it 42. Deal?",
+    "expected": "就按 42。成交？",
+    "rule_key": "sr:\"(?s)^Let's\\ call\\ it\\ (?<v_AMOUNT_i>.+?)\\.\\ Deal\\?$\"",
+    "covers": "generated template: Let's call it <AMOUNT>. Deal?"
+  },
+  {
+    "input": "I can do 42. We got a deal?",
+    "expected": "我可以出42。成交吗？",
+    "rule_key": "sr:\"(?s)^I\\ can\\ do\\ (?<v_AMOUNT_i>.+?)\\.\\ We\\ got\\ a\\ deal\\?$\"",
+    "covers": "generated template: I can do <AMOUNT>. We got a deal?"
+  },
+  {
+    "input": "Press __TEST_PERSON__ to open your phone.",
+    "expected": "按__TEST_PERSON__打开手机。",
+    "rule_key": "sr:\"(?s)^Press\\ (?<v_Input_TogglePhone>.+?)\\ to\\ open\\ your\\ phone\\.$\"",
+    "covers": "generated template: Press <Input_TogglePhone> to open your phone."
+  },
+  {
+    "input": "Got it. I'll be __TEST_PERSON__ for the next 6 hours.",
+    "expected": "知道了。接下来6小时我会待在__TEST_PERSON__。",
+    "rule_key": "sr:\"(?s)^Got\\ it\\.\\ I'll\\ be\\ (?<v_LOCATION>.+?)\\ for\\ the\\ next\\ 6\\ hours\\.$\"",
+    "covers": "generated template: Got it. I'll be <LOCATION> for the next 6 hours."
+  },
+  {
+    "input": "Okay. I'll be __TEST_PERSON__ for the next 6 hours.",
+    "expected": "好。接下来6小时我会待在__TEST_PERSON__。",
+    "rule_key": "sr:\"(?s)^Okay\\.\\ I'll\\ be\\ (?<v_LOCATION>.+?)\\ for\\ the\\ next\\ 6\\ hours\\.$\"",
+    "covers": "generated template: Okay. I'll be <LOCATION> for the next 6 hours."
+  },
+  {
+    "input": "Alright, I'll be a dealer for you but there is a 42 signing fee, and I'll take a 42 cut of each sale. We got a deal?",
+    "expected": "行，我帮你出货。签约费 42，每笔我抽 42。成交？",
+    "rule_key": "sr:\"(?s)^Alright,\\ I'll\\ be\\ a\\ dealer\\ for\\ you\\ but\\ there\\ is\\ a\\ (?<v_SIGNING_FEE_i>.+?)\\ signing\\ fee,\\ and\\ I'll\\ take\\ a\\ (?<v_CUT_i>.+?)\\ cut\\ of\\ each\\ sale\\.\\ We\\ got\\ a\\ deal\\?$\"",
+    "covers": "generated template: Alright, I'll be a dealer for you but there is a <SIGNING_FEE> signing fee, and I'll take a <CUT> cut of each sale. We got a deal?"
+  },
+  {
+    "input": "Hi. My friend said you were selling. Could I get __TEST_PERSON__? I can pay 42",
+    "expected": "嗨，朋友说你有货。来点 __TEST_PERSON__？我出 42。",
+    "rule_key": "sr:\"(?s)^Hi\\.\\ My\\ friend\\ said\\ you\\ were\\ selling\\.\\ Could\\ I\\ get\\ (?<v_PRODUCT>.+?)\\?\\ I\\ can\\ pay\\ (?<v_PRICE_i>.+?)$\"",
+    "covers": "generated template: Hi. My friend said you were selling. Could I get <PRODUCT>? I can pay <PRICE>"
+  },
+  {
+    "input": "Hey, you gave me a sample earlier. Very nice stuff. Can I get __TEST_PERSON__? I'll pay 42.",
+    "expected": "嘿，你之前那样品挺带劲。再来 __TEST_PERSON__？我出 42。",
+    "rule_key": "sr:\"(?s)^Hey,\\ you\\ gave\\ me\\ a\\ sample\\ earlier\\.\\ Very\\ nice\\ stuff\\.\\ Can\\ I\\ get\\ (?<v_PRODUCT>.+?)\\?\\ I'll\\ pay\\ (?<v_PRICE_i>.+?)\\.$\"",
+    "covers": "generated template: Hey, you gave me a sample earlier. Very nice stuff. Can I get <PRODUCT>? I'll pay <PRICE>."
+  },
+  {
+    "input": "Hey, I need __TEST_PERSON__. I'll pay 42. Deal?",
+    "expected": "嘿，我要 __TEST_PERSON__。出 42。成交？",
+    "rule_key": "sr:\"(?s)^Hey,\\ I\\ need\\ (?<v_PRODUCT>.+?)\\.\\ I'll\\ pay\\ (?<v_PRICE_i>.+?)\\.\\ Deal\\?$\"",
+    "covers": "generated template: Hey, I need <PRODUCT>. I'll pay <PRICE>. Deal?"
+  },
+  {
+    "input": "Hello, I'm after __TEST_PERSON__. I can pay 42 for it.",
+    "expected": "嘿，我要 __TEST_PERSON__。出 42。",
+    "rule_key": "sr:\"(?s)^Hello,\\ I'm\\ after\\ (?<v_PRODUCT>.+?)\\.\\ I\\ can\\ pay\\ (?<v_PRICE_i>.+?)\\ for\\ it\\.$\"",
+    "covers": "generated template: Hello, I'm after <PRODUCT>. I can pay <PRICE> for it."
+  },
+  {
+    "input": "Thank you. You should go talk to __TEST_PERSON__ - I think they'll like your stuff",
+    "expected": "谢了。去跟 __TEST_PERSON__ 说一声，他们会喜欢你的货。",
+    "rule_key": "sr:\"(?s)^Thank\\ you\\.\\ You\\ should\\ go\\ talk\\ to\\ (?<v_NAME>.+?)\\ \\-\\ I\\ think\\ they'll\\ like\\ your\\ stuff$\"",
+    "covers": "generated template: Thank you. You should go talk to <NAME> - I think they'll like your stuff"
+  },
+  {
+    "input": "Cheers. My friend __TEST_PERSON__ is a dealer and might be able to help you move your stuff. You should go speak to them.",
+    "expected": "谢啦。我朋友 __TEST_PERSON__ 是经销商，也许能帮你出货，去找他们。",
+    "rule_key": "sr:\"(?s)^Cheers\\.\\ My\\ friend\\ (?<v_NAME>.+?)\\ is\\ a\\ dealer\\ and\\ might\\ be\\ able\\ to\\ help\\ you\\ move\\ your\\ stuff\\.\\ You\\ should\\ go\\ speak\\ to\\ them\\.$\"",
+    "covers": "generated template: Cheers. My friend <NAME> is a dealer and might be able to help you move your stuff. You should go speak to them."
+  },
+  {
+    "input": "U got __TEST_PERSON__??? I'll pay 42 for it. DEAL?",
+    "expected": "有 __TEST_PERSON__ 吗？？？我出 42。成交？",
+    "rule_key": "sr:\"(?s)^U\\ got\\ (?<v_PRODUCT>.+?)\\?\\?\\?\\ I'll\\ pay\\ (?<v_PRICE_i>.+?)\\ for\\ it\\.\\ DEAL\\?$\"",
+    "covers": "generated template: U got <PRODUCT>??? I'll pay <PRICE> for it. DEAL?"
+  },
+  {
+    "input": "You got __TEST_PERSON__? I'll pay 42 for it",
+    "expected": "有 __TEST_PERSON__ 吗？我出 42。",
+    "rule_key": "sr:\"(?s)^You\\ got\\ (?<v_PRODUCT>.+?)\\?\\ I'll\\ pay\\ (?<v_PRICE_i>.+?)\\ for\\ it$\"",
+    "covers": "generated template: You got <PRODUCT>? I'll pay <PRICE> for it"
+  },
+  {
+    "input": "Oooh very nice! My friend __TEST_PERSON__ might like your stuff. Go check them out",
+    "expected": "哦，真不错！我的朋友__TEST_PERSON__可能会喜欢你的货。去找他们看看。",
+    "rule_key": "sr:\"(?s)^Oooh\\ very\\ nice!\\ My\\ friend\\ (?<v_NAME>.+?)\\ might\\ like\\ your\\ stuff\\.\\ Go\\ check\\ them\\ out$\"",
+    "covers": "generated template: Oooh very nice! My friend <NAME> might like your stuff. Go check them out"
+  },
+  {
+    "input": "This is good shit. __TEST_PERSON__ might be interested. You should go talk to them.",
+    "expected": "这货够劲。__TEST_PERSON__ 可能感兴趣，去跟他们说。",
+    "rule_key": "sr:\"(?s)^This\\ is\\ good\\ shit\\.\\ (?<v_NAME>.+?)\\ might\\ be\\ interested\\.\\ You\\ should\\ go\\ talk\\ to\\ them\\.$\"",
+    "covers": "generated template: This is good shit. <NAME> might be interested. You should go talk to them."
+  },
+  {
+    "input": "Alright cool, I'll meet you __TEST_PERSON__ between 42 and 42.",
+    "expected": "行，42 到 42，我在 __TEST_PERSON__ 等你。",
+    "rule_key": "sr:\"(?s)^Alright\\ cool,\\ I'll\\ meet\\ you\\ (?<v_LOCATION>.+?)\\ between\\ (?<v_WINDOW_START_i>.+?)\\ and\\ (?<v_WINDOW_END_i>.+?)\\.$\"",
+    "covers": "generated template: Alright cool, I'll meet you <LOCATION> between <WINDOW_START> and <WINDOW_END>."
+  },
+  {
+    "input": "Hell yeah my friend, I'll meet you __TEST_PERSON__ between 42 and 42.",
+    "expected": "必须的！42 到 42，我在 __TEST_PERSON__ 见你。",
+    "rule_key": "sr:\"(?s)^Hell\\ yeah\\ my\\ friend,\\ I'll\\ meet\\ you\\ (?<v_LOCATION>.+?)\\ between\\ (?<v_WINDOW_START_i>.+?)\\ and\\ (?<v_WINDOW_END_i>.+?)\\.$\"",
+    "covers": "generated template: Hell yeah my friend, I'll meet you <LOCATION> between <WINDOW_START> and <WINDOW_END>."
+  },
+  {
+    "input": "Yo homie, can I get __TEST_PERSON__? I'll pay 42",
+    "expected": "哟兄弟，来点 __TEST_PERSON__？我出 42。",
+    "rule_key": "sr:\"(?s)^Yo\\ homie,\\ can\\ I\\ get\\ (?<v_PRODUCT>.+?)\\?\\ I'll\\ pay\\ (?<v_PRICE_i>.+?)$\"",
+    "covers": "generated template: Yo homie, can I get <PRODUCT>? I'll pay <PRICE>"
+  },
+  {
+    "input": "Cheers dog. My friend __TEST_PERSON__ might like your stuff. Go check them out",
+    "expected": "谢啦伙计。我朋友 __TEST_PERSON__ 可能喜欢你的货，去会会他们。",
+    "rule_key": "sr:\"(?s)^Cheers\\ dog\\.\\ My\\ friend\\ (?<v_NAME>.+?)\\ might\\ like\\ your\\ stuff\\.\\ Go\\ check\\ them\\ out$\"",
+    "covers": "generated template: Cheers dog. My friend <NAME> might like your stuff. Go check them out"
+  },
+  {
+    "input": "Very nice bro. __TEST_PERSON__ might be interested. You should go talk to them.",
+    "expected": "够意思，兄弟。__TEST_PERSON__ 可能感兴趣，去跟他们说。",
+    "rule_key": "sr:\"(?s)^Very\\ nice\\ bro\\.\\ (?<v_NAME>.+?)\\ might\\ be\\ interested\\.\\ You\\ should\\ go\\ talk\\ to\\ them\\.$\"",
+    "covers": "generated template: Very nice bro. <NAME> might be interested. You should go talk to them."
+  },
+  {
+    "input": "The Bruiser (42)",
+    "expected": "布鲁斯（42）",
+    "rule_key": "sr:\"(?s)^The\\ Bruiser\\ \\((?<v_PRICE_i>.+?)\\)$\"",
+    "covers": "generated template: The Bruiser (<PRICE>)"
+  },
+  {
+    "input": "The Hotbox (42)",
+    "expected": "热盒（42）",
+    "rule_key": "sr:\"(?s)^The\\ Hotbox\\ \\((?<v_PRICE_i>.+?)\\)$\"",
+    "covers": "generated template: The Hotbox (<PRICE>)"
+  },
+  {
+    "input": "Yes (42)",
+    "expected": "是（42）",
+    "rule_key": "sr:\"(?s)^Yes\\ \\((?<v_PRICE_i>.+?)\\)$\"",
+    "covers": "generated template: Yes (<PRICE>)"
+  },
+  {
+    "input": "The Car Wash (42)",
+    "expected": "洗车行（42）",
+    "rule_key": "sr:\"(?s)^The\\ Car\\ Wash\\ \\((?<v_PRICE_i>.+?)\\)$\"",
+    "covers": "generated template: The Car Wash (<PRICE>)"
+  },
+  {
+    "input": "So you'd like to purchase __TEST_PERSON__? Payments are made from your online balance.",
+    "expected": "你想购买__TEST_PERSON__吗？款项将从你的在线余额中扣除。",
+    "rule_key": "sr:\"(?s)^So\\ you'd\\ like\\ to\\ purchase\\ (?<v_PROPERTY>.+?)\\?\\ Payments\\ are\\ made\\ from\\ your\\ online\\ balance\\.$\"",
+    "covers": "generated template: So you'd like to purchase <PROPERTY>? Payments are made from your online balance."
+  },
+  {
+    "input": "The Barn (42)",
+    "expected": "“谷仓”(42)",
+    "rule_key": "sr:\"(?s)^The\\ Barn\\ \\((?<v_PRICE_i>.+?)\\)$\"",
+    "covers": "generated template: The Barn (<PRICE>)"
+  },
+  {
+    "input": "That'll be a 42 signing free, and the employee's daily wage will be 42.",
+    "expected": "签约费为42，员工的每日工资为42。",
+    "rule_key": "sr:\"(?s)^That'll\\ be\\ a\\ (?<v_SIGN_FEE_i>.+?)\\ signing\\ free,\\ and\\ the\\ employee's\\ daily\\ wage\\ will\\ be\\ (?<v_DAILY_WAGE_i>.+?)\\.$\"",
+    "covers": "generated template: That'll be a <SIGN_FEE> signing free, and the employee's daily wage will be <DAILY_WAGE>."
+  },
+  {
+    "input": "Let's say 42 in cash, and I can get it done for you overnight.",
+    "expected": "现金给我42，我今晚就能帮你办妥。",
+    "rule_key": "sr:\"(?s)^Let's\\ say\\ (?<v_DIG_PRICE_i>.+?)\\ in\\ cash,\\ and\\ I\\ can\\ get\\ it\\ done\\ for\\ you\\ overnight\\.$\"",
+    "covers": "generated template: Let's say <DIG_PRICE> in cash, and I can get it done for you overnight."
+  },
+  {
+    "input": "Oh right, you probably ain't familiar with this town - welcome to charming Hyland Point. You can view a map on your <h1>phone</h>. Press __TEST_PERSON__ to view it.",
+    "expected": "对了，你可能还不熟悉这座城——欢迎来到迷人的海兰角。你可以在<h1>手机</h>上查看地图。按__TEST_PERSON__打开。",
+    "rule_key": "sr:\"(?s)^Oh\\ right,\\ you\\ probably\\ ain't\\ familiar\\ with\\ this\\ town\\ \\-\\ welcome\\ to\\ charming\\ Hyland\\ Point\\.\\ You\\ can\\ view\\ a\\ map\\ on\\ your\\ <h1>phone</h>\\.\\ Press\\ (?<v_Input_TogglePhone>.+?)\\ to\\ view\\ it\\.$\"",
+    "covers": "generated template: Oh right, you probably ain't familiar with this town - welcome to charming Hyland Point. You can view a map on your <h1>phone</h>. Press <Input_TogglePhone> to view it."
+  },
+  {
+    "input": "Got it. I'll let you know when it's ready. Should be about 42",
+    "expected": "知道了。准备好后我会通知你，大概需要42。",
+    "rule_key": "sr:\"(?s)^Got\\ it\\.\\ I'll\\ let\\ you\\ know\\ when\\ it's\\ ready\\.\\ Should\\ be\\ about\\ (?<v_TIME_i>.+?)$\"",
+    "covers": "generated template: Got it. I'll let you know when it's ready. Should be about <TIME>"
+  },
+  {
+    "input": "The drop is ready. You can find it __TEST_PERSON__",
+    "expected": "藏货点已经准备好了。你可以在__TEST_PERSON__找到。",
+    "rule_key": "sr:\"(?s)^The\\ drop\\ is\\ ready\\.\\ You\\ can\\ find\\ it\\ (?<v_LOCATION>.+?)$\"",
+    "covers": "generated template: The drop is ready. You can find it <LOCATION>"
+  },
+  {
+    "input": "I'm still currently waiting on a payment of 42. Please deposit it into my stash box when you've got a chance.",
+    "expected": "我还在等你支付42。有空时请把钱存进我的藏匿箱。",
+    "rule_key": "sr:\"(?s)^I'm\\ still\\ currently\\ waiting\\ on\\ a\\ payment\\ of\\ (?<v_DEBT_i>.+?)\\.\\ Please\\ deposit\\ it\\ into\\ my\\ stash\\ box\\ when\\ you've\\ got\\ a\\ chance\\.$\"",
+    "covers": "generated template: I'm still currently waiting on a payment of <DEBT>. Please deposit it into my stash box when you've got a chance."
+  },
+  {
+    "input": "My friend __TEST_PERSON__ can hook you up with __TEST_PERSON__. I've passed your number on to them.",
+    "expected": "我朋友 __TEST_PERSON__ 能帮你搞到 __TEST_PERSON__。号码我已经给他们了。",
+    "rule_key": "sr:\"(?s)^My\\ friend\\ (?<v_NAME>.+?)\\ can\\ hook\\ you\\ up\\ with\\ (?<v_PRODUCT>.+?)\\.\\ I've\\ passed\\ your\\ number\\ on\\ to\\ them\\.$\"",
+    "covers": "generated template: My friend <NAME> can hook you up with <PRODUCT>. I've passed your number on to them."
+  },
+  {
+    "input": "Unlocked achievement: 42",
+    "expected": "已解锁成就：42",
+    "rule_key": "sr:\"(?s)^Unlocked\\ achievement:\\ (?<v_ARG0>.+?)$\"",
+    "covers": "generated template: Unlocked achievement: {0}"
+  },
+  {
+    "input": "When holding an item, press 42 or 42 to rotate it.",
+    "expected": "手持物品时，按 42 或 42 旋转物品。",
+    "rule_key": "sr:\"(?s)^When\\ holding\\ an\\ item,\\ press\\ (?<v_Input_Left_i>.+?)\\ or\\ (?<v_Input_Right_i>.+?)\\ to\\ rotate\\ it\\.$\"",
+    "covers": "generated template: When holding an item, press <Input_Left> or <Input_Right> to rotate it."
+  },
+  {
+    "input": "CURFEW SOON\n42 MINS",
+    "expected": "宵禁即将开始\n42 分钟后",
+    "rule_key": "sr:\"(?s)^CURFEW\\ SOON\\\n(?<v_ARG0>.+?)\\ MINS$\"",
+    "covers": "generated template: CURFEW SOON\n{0} MINS"
+  },
+  {
+    "input": "You can now order __TEST_PERSON__ from __TEST_PERSON__. __TEST_PERSON__ can be used to __TEST_PERSON__.",
+    "expected": "你现在可以从 __TEST_PERSON__ 订购 __TEST_PERSON__。__TEST_PERSON__ 可用于 __TEST_PERSON__。",
+    "rule_key": "sr:\"(?s)^You\\ can\\ now\\ order\\ (?<v_PRODUCT>.+?)\\ from\\ (?<v_NAME>.+?)\\.\\ \\k<v_PRODUCT>\\ can\\ be\\ used\\ to\\ (?<v_PURPOSE>.+?)\\.$\"",
+    "covers": "generated template: You can now order <PRODUCT> from <NAME>. <PRODUCT> can be used to <PURPOSE>."
+  },
+  {
+    "input": "Cartel Region Activities - 42",
+    "expected": "卡特尔区域活动 - 42",
+    "rule_key": "sr:\"(?s)^Cartel\\ Region\\ Activities\\ \\-\\ (?<v_ARG0>.+?)$\"",
+    "covers": "generated template: Cartel Region Activities - {0}"
+  },
+  {
+    "input": "Click and hold tap to fill (42%)",
+    "expected": "按住水龙头注水（42%）",
+    "rule_key": "sr:\"(?s)^Click\\ and\\ hold\\ tap\\ to\\ fill\\ \\((?<v_ARG0>.+?)%\\)$\"",
+    "covers": "generated template: Click and hold tap to fill ({0}%)"
+  },
+  {
+    "input": "Hey boss, I've heard there's a Benzies deal happening in 42, 42. Might be worth checking out.",
+    "expected": "嘿，老板，听说42，42有笔本吉斯家族的交易。值得去看看。",
+    "rule_key": "sr:\"(?s)^Hey\\ boss,\\ I've\\ heard\\ there's\\ a\\ Benzies\\ deal\\ happening\\ in\\ (?<v_ARG0>.+?),\\ (?<v_ARG1>.+?)\\.\\ Might\\ be\\ worth\\ checking\\ out\\.$\"",
+    "covers": "generated template: Hey boss, I've heard there's a Benzies deal happening in {0}, {1}. Might be worth checking out."
+  },
+  {
+    "input": "Excellent taste, __TEST_PERSON__",
+    "expected": "品味不错，__TEST_PERSON__",
+    "rule_key": "sr:\"(?s)^Excellent\\ taste,\\ (?<v_formal_address>.+?)$\"",
+    "covers": "generated template: Excellent taste, formal_address"
+  },
+  {
+    "input": "1x",
+    "expected": "1x",
+    "covers": "Standalone inventory stack count retains its original x suffix"
+  },
+  {
+    "input": "2x",
+    "expected": "2x",
+    "covers": "Standalone inventory stack count retains its original x suffix"
+  },
+  {
+    "input": "8x",
+    "expected": "8x",
+    "covers": "Standalone inventory stack count retains its original x suffix"
+  },
+  {
+    "input": "9x",
+    "expected": "9x",
+    "covers": "Standalone inventory stack count retains its original x suffix"
+  },
+  {
+    "input": "16x",
+    "expected": "16x",
+    "covers": "Standalone inventory stack count retains its original x suffix"
+  },
+  {
+    "input": "99x",
+    "expected": "99x",
+    "covers": "Standalone inventory stack count retains its original x suffix"
+  },
+  {
+    "input": "8x MSAA",
+    "expected": "8 倍 MSAA",
+    "covers": "Graphics sampling multiplier keeps its context-specific translation"
+  },
+  {
+    "input": "Speed Multiplier: 2x",
+    "expected": "速度倍率：2x",
+    "covers": "Inventory quantity rule does not match a speed multiplier sentence"
+  },
+  {
+    "input": "2 drivers",
+    "expected": "2 位司机",
+    "covers": "Drivers plural count substitution"
+  },
+  {
+    "input": "12 drivers",
+    "expected": "12 位司机",
+    "covers": "Drivers multi-digit count substitution"
+  },
+  {
+    "input": "Route has 2 drivers assigned",
+    "expected": "Route has 2 drivers assigned",
+    "covers": "Drivers count rule must be anchored"
+  },
+  {
+    "input": "The Hippies are coming to town...",
+    "expected": "嬉皮士要进城了……",
+    "covers": "Special-customer recursive group lookup"
+  },
+  {
+    "input": "The Rock Band is coming to town...",
+    "expected": "摇滚乐队要进城了……",
+    "covers": "Special-customer singular template and multiword group"
+  },
+  {
+    "input": "The <color=#FF5B5B>Businessmen</color> are coming to town...",
+    "expected": "<color=#FF5B5B>商人</color>要进城了……",
+    "covers": "Special-customer Unicode-equals decoding and raw rich-text captures"
+  },
+  {
+    "input": "The <color=red>Hippies</color> have arrived.",
+    "expected": "<color=red>嬉皮士</color>来了。",
+    "covers": "Special-customer arrival template and color preservation"
+  },
+  {
+    "input": "The gardener is coming to town...",
+    "expected": "The gardener is coming to town...",
+    "covers": "Special-customer rules limited to confirmed groups"
+  },
+  {
+    "input": "Hire a Driver from Manny.\n\nUse the Drivers app to set routes, deliveries and trips.\n\nAssign a vehicle you bought from the dealership.",
+    "expected": "从曼尼那里雇用一名司机。\n\n使用“司机”应用设置路线、配送和行程。\n\n为司机分配一辆你从汽车经销商处购买的车辆。",
+    "covers": "Supplemental TextHelper escaping, tags/placeholders or significant whitespace"
+  },
+  {
+    "input": "Oh! And I remember hearing <color=blue><NPC_DESCRIPTION></color> has one! Sorry, Oscar isn't very good with names. Hope this helps.",
+    "expected": "哦！我想起来听人说，<color=blue><NPC_DESCRIPTION></color> 有一个！抱歉，奥斯卡不太擅长记名字。希望能帮上忙。",
+    "covers": "Supplemental TextHelper escaping, tags/placeholders or significant whitespace"
+  },
+  {
+    "input": "You the new guy in town?\t",
+    "expected": "你就是镇上新来的那位？\t",
+    "covers": "Supplemental TextHelper escaping, tags/placeholders or significant whitespace"
+  },
+  {
+    "input": "Big fancy conference table. You can place stuff on it. ",
+    "expected": "宽敞气派的会议桌。可以在上面放东西。 ",
+    "covers": "Supplemental TextHelper escaping, tags/placeholders or significant whitespace"
+  }
+]
