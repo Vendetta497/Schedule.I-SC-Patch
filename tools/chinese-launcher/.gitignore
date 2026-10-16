@@ -1,0 +1,8 @@
+__pycache__/
+runtime/
+fonts/
+state/
+backups/
+logs/
+*.zip
+Steam启动选项.txt
